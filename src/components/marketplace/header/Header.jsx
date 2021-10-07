@@ -24,7 +24,7 @@ const CategoryDropDown = () => {
         selected="0"
         toggleClass="px-2.5 py-2 bg-gray3 text-white rounded w-160px font-bold"
         menuClass="bg-gray3 w-full mt-1 rounded"
-        itemClass="px-2.5 py-2 bg-gray3 text-white font-bold w-full"
+        itemClass="px-2.5 py-2 text-white font-bold w-full"
       />
     </div>
   );

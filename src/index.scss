@@ -20,8 +20,10 @@ code {
   width: 160px;
 }
 
-button:focus,
-input:focus {
-  outline: none !important;
-  box-shadow: none !important;
+button,
+input {
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
 }

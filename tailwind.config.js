@@ -49,12 +49,10 @@ module.exports = {
       uhd: '3840px',
       s4k: '4096px',
     },
-    backgroundColor: theme => ({
-      ...theme('colors'),
+    backgroundColor: () => ({
       ...myTheme
      }),
-     borderColor: theme => ({
-      ...theme('colors'),
+     borderColor: () => ({
       ...myTheme
      })
   },

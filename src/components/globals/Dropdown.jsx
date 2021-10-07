@@ -1,5 +1,6 @@
 import _ from "lodash";
 import { useState } from "react";
+import { useDetectClickOutside } from 'react-detect-click-outside';
 import { FaAngleDown } from "react-icons/fa";
 import { Button3E } from "./Button"
 import { ListColumn, Item } from "./List";
@@ -15,8 +16,11 @@ export const Dropdown3E = ({ selected, menu, onItemClick, toggleClass, menuClass
       onItemClick(event);
     }
   }
+  const ref = useDetectClickOutside({ onTriggered: () => {
+    setIsDrop(false);
+  }});
   return (
-    <div>
+    <div ref={ref}>
       <Button3E onClick={() => setIsDrop(!isDrop)} className={toggleClass}>
         {menu[_selected].start}
         {menu[_selected].mid}
